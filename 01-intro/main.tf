@@ -11,12 +11,23 @@ variable "x" {
   default = 10
 }
 
+# List Variable
+
+variable "y" {
+  default = { 1, "abc", 0,3, false}
+}
+
+# list can have a combination of types also
+
 
 ## Print Variable on output
 output "x" {
   value = var.x
 }
 
+output "y1" {
+  value = var.y[0]
+}
 
 
 # if our value is just variable then var.x, if it is combination of strings then "$(var.x)
