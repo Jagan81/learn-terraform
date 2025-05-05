@@ -19,6 +19,12 @@ variable "y" {
 
 # list can have a combination of types also
 
+variable "z" {
+  default = {
+    name = "John"
+    age = 20
+  }
+}
 
 ## Print Variable on output
 output "x" {
@@ -33,4 +39,8 @@ output "y1" {
 # if our value is just variable then var.x, if it is combination of strings then "$(var.x)
 output "x1" {
   value = "Value of x - ${var.x}"
+}
+
+output "z" {
+  value = "Name - ${var.z["name"]}, Age - ${var.z.age}"
 }
