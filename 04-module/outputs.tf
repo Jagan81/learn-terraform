@@ -1,3 +1,3 @@
 output "resource-count" {
-  value = module.null-resources
+  value = length(module.null-resources)
 }
