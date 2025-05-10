@@ -6,3 +6,8 @@ resource "local_file" "test" {
 variable "content" {
   default = null
 }
+
+
+resource "null_resource" "test" {
+  count = 0
+}
