@@ -7,5 +7,5 @@ locals {
 }
 
 output "x" {
-  value = "local.x"
+  value = "locals.x"
 }
